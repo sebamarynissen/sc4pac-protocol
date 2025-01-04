@@ -13,5 +13,4 @@ const res = await octokit.request('GET /repos/{owner}/{repo}/releases', {
 	},
 });
 
-let [latest] = res;
-console.log(latest);
+console.log(res);
