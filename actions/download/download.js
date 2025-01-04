@@ -4,8 +4,15 @@ import github from '@actions/github';
 const cwd = process.env.GITHUB_WORKSPACE ?? process.env.cwd();
 const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
 
-const response = await octokit.rest.repos.getLatestRelease({
+const res = await octokit.request('GET /repos/{owner}/{repo}/releases', {
 	owner: 'memo33',
 	repo: 'sc4pac-gui',
+	tag: '0.2.1',
+	headers: {
+		'X-GitHub-Api-Version': '2022-11-28'
+	},
 });
-console.log(response);
+
+let json = await res.json();
+let [latest] = json;
+console.log(latest);
