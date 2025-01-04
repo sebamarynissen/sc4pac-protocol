@@ -24,13 +24,12 @@ if (!gotTheLock) {
 
 // Launches the sc4pac server.
 async function sc4pac() {
-	let child = cp.spawn('cli\\sc4pac.bat', [
-			'server',
-			'--port 51515',
-			'--web-app-dir webapp',
-		], {
-		shell: true,
-	});
+	let cmd = process.platform === 'win32' ? 'cli/sc4pac.bat' : 'cli/sc4pac';
+	cp.spawn(cmd, [
+		'server',
+		'--port 51515',
+		'--web-app-dir webapp',
+	], { shell: true });
 }
 
 Promise.all([
