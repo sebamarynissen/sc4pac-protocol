@@ -15,8 +15,7 @@ win:
   sign: false
 
 mac:
-  target:
-    - dmg
+  target: dmg
 
 linux:
   target:
