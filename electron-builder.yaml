@@ -10,7 +10,7 @@ extraFiles:
 
 win:
   target:
-    - dir
+    - zip
   sign: false
 
 linux:
