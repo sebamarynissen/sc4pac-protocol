@@ -17,6 +17,9 @@ jobs:
           - name: windows-latest
             path: ./dist/win32/win-unpacked/**
             label: windows
+          - name: macos-latest
+            path: ./dist/**
+            label: mac
     runs-on: ${{ matrix.os.name }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
