@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "main": "main.js",
+  "engines": {
+    "node": "^22.11"
+  },
   "scripts": {
     "start": "electron . sc4pac://sc4pac.sebamarynissen.dev/?pkg=jasoncw:xenon-center",
     "build": "electron-builder",
