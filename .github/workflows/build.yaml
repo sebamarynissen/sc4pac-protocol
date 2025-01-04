@@ -45,19 +45,8 @@ jobs:
     needs: build
     steps:
       - name: Download Linux artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: linux
-
-      - name: Download macOS artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: mac
-
-      - name: Download Windows artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: windows
+        uses: actions/download-artifact@v4
+      - run: tree
       - name: Create release
         id: create_release
         uses: softprops/action-gh-release@v1
