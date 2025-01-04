@@ -1,0 +1,21 @@
+{
+  "name": "sc4pac-protocol",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . sc4pac://sc4pac.sebamarynissen.dev/?pkg=jasoncw:xenon-center",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,13 @@
+appId: sc4pac-auth
+
+win:
+  target:
+    - zip
+  sign: false
+
+linux:
+  target:
+    - zip
+
+directories:
+  output: dist/${platform}
