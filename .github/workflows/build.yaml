@@ -26,7 +26,9 @@ jobs:
         with:
           node-version-file: package.json
       - run: npm ci
+      - uses: milliewalky/setup-7-zip@v2
       - uses: ./actions/download
+      - run: 7z dist/webapp.zip webapp/ cli/
       - run: tree
       # - run: npm run build
       # - name: Upload Artifacts
