@@ -1,0 +1,5 @@
+name: Download sc4pac-gui
+
+runs:
+  using: 'node20'
+  action: 'download.js'
