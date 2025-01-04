@@ -13,5 +13,7 @@ const res = await octokit.request('GET /repos/{owner}/{repo}/releases', {
 	},
 });
 
+// Find the webapp asset.
 let [latest] = res.data;
-console.log(latest.assets);
+let webapp = latest.assets.find(asset => asset.name.includes('webapp'));
+console.log(webapp);
