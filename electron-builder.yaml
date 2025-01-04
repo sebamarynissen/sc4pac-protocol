@@ -3,6 +3,7 @@ appId: sc4pac-auth
 files:
   - "!cli/**"
   - "!webapp/**"
+  - "!dist/**"
 
 extraFiles:
   - webapp
@@ -12,6 +13,10 @@ win:
   target:
     - dir
   sign: false
+
+mac:
+  target:
+    - dmg
 
 linux:
   target:
