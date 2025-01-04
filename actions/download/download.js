@@ -13,4 +13,5 @@ const res = await octokit.request('GET /repos/{owner}/{repo}/releases', {
 	},
 });
 
-console.log(res);
+let [latest] = res.data;
+console.log(latest.assets);
