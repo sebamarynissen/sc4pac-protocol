@@ -57,7 +57,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: windows
-       - name: Create release
+      - name: Create release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
