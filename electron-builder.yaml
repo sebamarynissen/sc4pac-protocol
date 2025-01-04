@@ -10,12 +10,12 @@ extraFiles:
 
 win:
   target:
-    - zip
+    - dir
   sign: false
 
 linux:
   target:
-    - zip
+    - dir
 
 directories:
   output: dist/${platform}
