@@ -1,8 +1,16 @@
 appId: sc4pac-auth
 
+files:
+  - "!cli/**"
+  - "!webapp/**"
+
+extraFiles:
+  - webapp
+  - cli
+
 win:
   target:
-    - zip
+    - dir
   sign: false
 
 linux:

@@ -7,7 +7,7 @@
     "node": "^22.11"
   },
   "scripts": {
-    "start": "electron . sc4pac://sc4pac.sebamarynissen.dev/?pkg=jasoncw:xenon-center",
+    "start": "electron .",
     "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
