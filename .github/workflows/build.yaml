@@ -38,3 +38,32 @@ jobs:
         with:
           name: ${{ matrix.os.label }}
           path: ${{ matrix.os.path }}
+
+
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Linux artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: linux
+
+      - name: Download macOS artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: mac
+
+      - name: Download Windows artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: windows
+       - name: Create release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ./linux/*
+            ./macos/*
+            ./windows/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
