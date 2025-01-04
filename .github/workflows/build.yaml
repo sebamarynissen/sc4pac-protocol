@@ -18,8 +18,9 @@ jobs:
           node-version-file: package.json
       - run: npm ci
       - run: npm run build
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: sc4pac-protocol
-          path: ./dist/*.zip
+      - run: tree
+      # - name: Upload Artifacts
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: sc4pac-protocol
+      #     path: ./dist/*.zip
