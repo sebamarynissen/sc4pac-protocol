@@ -29,10 +29,9 @@ jobs:
       - uses: milliewalky/setup-7-zip@v2
       - uses: ./actions/download
       - run: 7z x dist/webapp.zip webapp/ cli/
-      - run: tree
-      # - run: npm run build
-      # - name: Upload Artifacts
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: ${{ matrix.os.label }}
-      #     path: ${{ matrix.os.path }}
+      - run: npm run build
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.os.label }}
+          path: ${{ matrix.os.path }}
