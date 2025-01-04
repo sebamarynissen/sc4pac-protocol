@@ -7,8 +7,7 @@ on:
 
 jobs:
   build:
-    permissions:
-      content: write
+    permissions: write-all
     strategy:
       matrix:
         os:
