@@ -11,10 +11,10 @@ jobs:
       matrix:
         os:
           - name: ubuntu-latest
-            path: ./dist/linux/linux-unpacked
+            path: ./dist/linux/linux-unpacked/**
             label: linux
           - name: windows-latest
-            path: ./dist/win32/win-unpacked
+            path: ./dist/win32/win-unpacked/**
             label: windows
     runs-on: ${{ matrix.os.name }}
     steps:
