@@ -12,10 +12,10 @@ jobs:
       matrix:
         os:
           - name: ubuntu-latest
-            path: ./dist/linux/linux-unpacked/**
+            path: ./dist/linux/*.zip
             label: linux
           - name: windows-latest
-            path: ./dist/win32/win-unpacked/**
+            path: ./dist/win32/*.zip
             label: windows
           - name: macos-latest
             path: ./dist/darwin/*.dmg
@@ -39,7 +39,6 @@ jobs:
           name: ${{ matrix.os.label }}
           path: ${{ matrix.os.path }}
 
-
   release:
     runs-on: ubuntu-latest
     needs: build
@@ -53,7 +52,7 @@ jobs:
         with:
           files: |
             ./linux/*
-            ./macos/*
+            ./mac/*
             ./windows/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

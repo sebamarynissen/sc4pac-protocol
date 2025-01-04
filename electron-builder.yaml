@@ -11,7 +11,7 @@ extraFiles:
 
 win:
   target:
-    - dir
+    - zip
   sign: false
 
 mac:
@@ -19,7 +19,7 @@ mac:
 
 linux:
   target:
-    - dir
+    - zip
 
 directories:
   output: dist/${platform}
