@@ -19,6 +19,8 @@
     "electron-builder": "^25.1.8"
   },
   "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
     "express": "^4.21.2"
   }
 }
